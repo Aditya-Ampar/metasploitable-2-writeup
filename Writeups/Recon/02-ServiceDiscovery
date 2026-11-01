@@ -1,0 +1,52 @@
+# OBJECTIVE
+
+To find active services running in the target host 
+
+# ENVIRONMENT
+
+| Parameter   | Value    |
+|--------------- | --------------- |
+| Target   | Metasploitable  |
+| Target IP   | 192.168.208.128   |
+| Attacket IP   | 10.69.11.218   |
+| Tool  |   Nmap    |
+
+# METHODOLOGY
+
+## Service Version Scanning
+
+Command:
+> nmap -sV 192.168.208.128
+
+Explanation:
+- -sV enables service and version detection on a host or an IP range
+- 192.168.208.128 to specify the host to be scanned
+
+Observation:
+- Returned only the open responding ports and filtered ports are ignored.
+- Gathered Information about numerous running serivces and its version number with the port the service is using 
+- Only the tcp services are detected
+
+# RESULTS
+
+Evidences: Evidence/Service_Version.txt
+
+# MITRE ATTACK MAPPING
+
+| Field | Mapping |
+| -------------- | --------------- |
+| Tactic | Reconaissance(TA0043) |
+| Technique | Active Scanning (T1595) |
+| Sub-Technique | Scanning IP Blocks (T1595.001) |
+
+# CONCLUSIONS
+- Ports used by the services and the service information are gathered 
+- Information gathered can be used to further plan attack path
+- Further information such as OS can be collected
+
+
+
+
+
+
+
